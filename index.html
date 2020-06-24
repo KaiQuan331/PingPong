@@ -1,28 +1,24 @@
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Pong</title>
+    <meta charset="utf-8" />
+    <title>Pong Canvas Game</title>
     <style>
-        body {
-            align-items: center;
-            background: #202020;
-            display: flex;
-            margin: 0;
-        }
-        canvas {
-            border: solid 1px #fff;
-            border-left: none;
-            border-right: none;
-            image-rendering: pixelated;
-            width: 100%;
-        }
-        #start{
-            color: green
-        }
+    	* { padding: 0; margin: 0; }
+    	canvas { background: #eee; display: block; margin: 0 auto; }
     </style>
 </head>
 <body>
-    <button id="start">Press Here to Start</button>
-    <button onclick="document.location='newpage.html'">Press Here to go to another page</button>
-    <script src="index.js"></script>
+
+<canvas id="myCanvas" width="480" height="320"></canvas>
+
+<script src = "pong.js">
+	// JavaScript code goes here
+</script>
+
 </body>
-</html>
+</html>>
+
+
+<!-- <button id="start">Press Here to Start</button> -->
+<!-- <button onclick="document.location='newpage.html'">Press Here to go to another page</button> -->

@@ -141,11 +141,23 @@ function update(){
         com.score++;
         comScore.play();
         resetBall();
+    if( com.score == 7){
+        mario.play();
+        alert("You LOSE :(")
+        document.location.reload();
+        clearInterval(interval);
+    }
     }else if( ball.x + ball.radius > canvas.width){
         user.score++;
         userScore.play();
         resetBall();
+    if (user.score == 7){
+        alert("You Win!!!! :D")
+        document.location.reload();
+        clearInterval(interval);
     }
+    }
+    
     
     // the ball has a velocity
     ball.x += ball.velocityX;

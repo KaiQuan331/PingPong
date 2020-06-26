@@ -1,3 +1,4 @@
+
 // select canvas element
 const canvas = document.getElementById("pong");
 
@@ -11,13 +12,16 @@ let userScore = new Audio();
 let comScore = new Audio();
 let ugh = new Audio();
 let mario = new Audio();
+let Winner = new Audio();
 
 hit.src = "sounds/hit.mp3";
 wall.src = "sounds/wall.mp3";
 comScore.src = "sounds/comScore.mp3";
 userScore.src = "sounds/userScore.mp3";
 ugh.src= "sounds/ugh.mp3";
-mario.src = "sounds/mario.mp3"
+mario.src = "sounds/mario.mp3";
+Winner.src= "sounds/Winner.mp3"
+
 
 // Ball object
 const ball = {
@@ -27,7 +31,7 @@ const ball = {
     velocityX : 5,
     velocityY : 5,
     speed : 10,
-    color : "WHITE"
+    color : "White"
 }
 
 // User Paddle
@@ -153,6 +157,7 @@ function update(){
         resetBall();
     if (user.score == 7){
         alert("You Win!!!! :D")
+        Winner.play();
         document.location.reload();
         clearInterval(interval);
     }
@@ -234,8 +239,5 @@ let framePerSecond = 50;
 //call the game function 50 times every 1 Sec
 let loop = setInterval(game,1000/framePerSecond);
 
-//Mute
-function enableMute() { 
-    vid.muted = true;
-  } 
+
 

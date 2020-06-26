@@ -16,11 +16,29 @@
             left:0;
             bottom:0;
         }
+        p{
+            font-size: 24px;
+        }
+
+        ol{
+            text-decoration: underline;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
-    <button onclick="enableMute()" type="button">Mute sound</button>
+    
     <canvas id="pong" width="600" height="400"></canvas>
     <script src="pong.js"></script>
+    
+    <img src="images/rules.png" alt="Rules" width=200>
+    <ol>
+        <li>Start by using your mouse as to controll your side (Left).</li>
+        <li>The goal is to hit the the ball on the other side of the wall without the other paddle being able to hit it.</li>
+        <li> But watch out, the other paddle is also trying to move in so that they can hit your wall as well.</li>
+        <li> First to 7 points wins!</li>
+        <li>Good luck!</li>
+      </ol>
+
 </body>
 </html>
